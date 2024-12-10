@@ -10,6 +10,41 @@ body {
     padding: 20px;
 }
 
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Desktop - 3 columns */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet - 2 columns */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile - 1 column */
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-item {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
 h1 {
     margin-bottom: 1rem;
 }
@@ -32,5 +67,6 @@ ul {
 }
 
 video {
-    margin: 1rem 0;
+    width: 100%;
+    border-radius: 4px;
 } 
